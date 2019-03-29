@@ -21,10 +21,11 @@ class HomeScreen extends React.Component {
 
 
     render() {
+      const {navigation} = this.props
       return (
         <BackgroundGradient>
-            <UploadVideoSection {...FromGallery} />
-            <UploadVideoSection {...FromSample} />
+            <UploadVideoSection {...FromGallery} onPress={()=>{NavigateTo(navigation,"StepTwoTrimVideo")}} />
+            <UploadVideoSection {...FromSample} onPress={()=>{NavigateTo(navigation,"StepTwoTrimVideo")}}/>
         </BackgroundGradient>
       );
     }

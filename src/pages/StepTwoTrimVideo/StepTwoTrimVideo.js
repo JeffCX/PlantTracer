@@ -16,7 +16,7 @@ const FromSample = {
 class HomeScreen extends React.Component {
 
   static navigationOptions = ({navigation}) =>{
-    return GenerateNavigationButton("Step One: Upload Video",navigation)
+    return GenerateNavigationButton("Step Two: Trim Video",navigation)
 }
 
 

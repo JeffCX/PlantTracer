@@ -27,6 +27,7 @@ const Tutorial = {
 const url = "http://www.planttracer.com/"
 
 class HomeScreen extends React.Component {
+    
     static navigationOptions = {
         header:null
     };
