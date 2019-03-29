@@ -11,6 +11,19 @@ const NavigationButton = (props) =>{
             </View>
 }
 
+
+const ToHomeButton = (props) =>{
+    return <View style={{paddingRight:10}}>
+                <TouchableOpacity onPress={()=>{props.navigation.navigate("HomeScreen")}}>
+                    <Icon name="home" style={{color:"black"}} size={30} />
+                </TouchableOpacity>
+            </View>
+}
+
+
+
+
+
 const GenerateNavigationButton = (title,navigation) =>{
     return  {
         title: `${title}`,
@@ -20,7 +33,8 @@ const GenerateNavigationButton = (title,navigation) =>{
         headerTitleStyle: {
             color:"black"
         },
-        headerLeft: <NavigationButton navigation={navigation} />
+        headerLeft: <NavigationButton navigation={navigation} />,
+        headerRight: <ToHomeButton navigation={navigation} />
     }
 }
 

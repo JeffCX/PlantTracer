@@ -16,6 +16,22 @@ const FromSample = {
 
 class HomeScreen extends React.Component {
 
+  state = {
+    tracing:false
+  }
+
+  tracing = () =>{
+    this.setState({
+      tracing:!this.state.tracing
+    })
+
+    setTimeout(()=>{
+      this.setState({
+        tracing:!this.state.tracing
+      })
+    },1500)
+  }
+
   static navigationOptions = ({navigation}) =>{
     return GenerateNavigationButton("Step Five: Tracing",navigation)
 }
@@ -25,7 +41,10 @@ class HomeScreen extends React.Component {
       return (
         <BackgroundGradient>
             <Image source={require("../../asset/placeHolderImage.jpg")} style={{width:"100%",height:"40%",marginBottom:15}}/>
-            <Button content="Next" />
+            <Button 
+              content={this.state.tracing?"Tracing...":"Trace"} 
+              onPress={this.tracing} 
+              />
         </BackgroundGradient>
       );
     }
