@@ -1,12 +1,31 @@
 import React from "react"
-import {View,Text} from "react-native"
+import {View,Text,TouchableOpacity} from "react-native"
+import BackgroundGradient from '../../component/BackgroundGradient';
+import UploadVideoSection from "../../component/UploadVideoSection"
+import {NavigateTo} from "../../api/NavigateTo"
+import {GenerateNavigationButton} from "../../api/GenereateHeader"
+
+const FromGallery = {
+    title:"Select from \n Video Gallery",
+}
+
+const FromSample = {
+    title:"Select from  \n Sample Videoo",
+}
 
 class HomeScreen extends React.Component {
+
+  static navigationOptions = ({navigation}) =>{
+    return GenerateNavigationButton("Step One: Upload Video",navigation)
+}
+
+
     render() {
       return (
-        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-          <Text>Home Screen</Text>
-        </View>
+        <BackgroundGradient>
+            <UploadVideoSection {...FromGallery} />
+            <UploadVideoSection {...FromSample} />
+        </BackgroundGradient>
       );
     }
   }

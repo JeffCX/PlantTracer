@@ -1,21 +1,14 @@
 import React from "react"
 import {StyleSheet,View,Text, TouchableOpacity} from "react-native"
 import {largeSize, smallSize} from "../static"
+import Icon from "react-native-vector-icons/AntDesign"
 
 const HomeSection = (props) =>{
     return <View style={Styles.container}>
                 <TouchableOpacity onPress={props.onPress}>
-                    
+                <Icon name="videocamera" size={40} color="white" style={{textAlign:"center"}}/>
                     <Text style={Styles.title}>
                         {props.title}
-                    </Text>
-
-                    <Text style={Styles.content}>
-                        {props.content}
-                    </Text>
-                    
-                    <Text style={Styles.underline}>
-                        ------ 
                     </Text>
                 </TouchableOpacity>
            </View>
@@ -33,13 +26,6 @@ const Styles = StyleSheet.create({
         shadowOpacity: 1.0,
         alignItems:"center"
     },
-    underline:{
-        textAlign:"center",
-        color:"white",
-        fontSize:smallSize,
-        fontWeight:"bold",
-        marginBottom:smallSize
-    },
     title:{
         textAlign:"center",
         color:"white",
@@ -47,11 +33,4 @@ const Styles = StyleSheet.create({
         fontWeight:"bold",
         marginBottom:smallSize
     },
-    content:{
-        textAlign:"center",
-        color:"white",
-        fontSize:smallSize,
-        marginBottom:smallSize
-    },
-    
 })
