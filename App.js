@@ -1,41 +1,23 @@
-import React from "react";
-import { View, Text, Button } from "react-native";
 import { createStackNavigator, createAppContainer } from "react-navigation";
 
-class HomeScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>Home Screen</Text>
-        <Button 
-          title="gan"
-          onPress={() => this.props.navigation.navigate('Details')} />
-      </View>
-    );
-  }
-}
-
-
-class DetailsScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>Details Screen</Text>
-        <Button 
-        title="gan"
-        onPress={() => this.props.navigation.navigate('Home')} />
-      </View>
-    );
-  }
-}
+import HomeScreen from "./src/pages/Home/Home"
+import StepOneUploadVideo from "./src/pages/StepOneUploadVideo/StepOneUploadVideo"
+import StepTwoTrimVideo from "./src/pages/StepTwoTrimVideo/StepTwoTrimVideo"
+import StepThreeSelectCaptureInterval from "./src/pages/StepThreeSelectCaptureInterval/StepThreeSelectCaptureInterval"
+import StepFourSelectScale from "./src/pages/StepFourSelectScale/StepFourSelectScale"
+import StepFiveTracing from "./src/pages/StepFiveTracing/StepFiveTracing"
 
 const AppNavigator = createStackNavigator(
   {
-    Home: HomeScreen,
-    Details: DetailsScreen
+    HomeScreen,
+    StepOneUploadVideo,
+    StepTwoTrimVideo,
+    StepThreeSelectCaptureInterval,
+    StepFourSelectScale,
+    StepFiveTracing
   },
   {
-    initialRouteName: "Home"
+    initialRouteName: "HomeScreen"
   }
 );
 
