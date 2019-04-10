@@ -5,6 +5,7 @@ import UploadVideoSection from "../../component/UploadVideoSection"
 import {NavigateTo} from "../../api/NavigateTo"
 import {GenerateNavigationButton} from "../../api/GenereateHeader"
 import ImagePicker from 'react-native-image-picker';
+import Canvas from "../../component/Canvas"
 
 const FromGallery = {
     title:"Select from \n Video Gallery",
@@ -61,8 +62,8 @@ class HomeScreen extends React.Component {
       const {navigation} = this.props
       return (
         <BackgroundGradient>
-            <Button title="gan" onPress={this._pickVideo} />
-            <Image source={this.state.avatarSource} style={{width:300,height:300}} />
+           
+
             <UploadVideoSection {...FromGallery} onPress={()=>{NavigateTo(navigation,"StepTwoTrimVideo")}} />
             <UploadVideoSection {...FromSample} onPress={()=>{NavigateTo(navigation,"StepTwoTrimVideo")}}/>
         </BackgroundGradient>
@@ -72,3 +73,5 @@ class HomeScreen extends React.Component {
 
 
   export default HomeScreen
+
+  // <Button title="gan" onPress={this._pickVideo} />
