@@ -21,9 +21,6 @@ const ToHomeButton = (props) =>{
 }
 
 
-
-
-
 const GenerateNavigationButton = (title,navigation) =>{
     return  {
         title: `${title}`,

@@ -1,28 +1,8 @@
 import React from "react"
-import {View,Text,TouchableOpacity} from "react-native"
 import BackgroundGradient from '../../component/BackgroundGradient';
 import HomeSection from "../../component/HomeSection"
 import {LinkTo, NavigateTo} from "../../api/NavigateTo"
-
-const Circumnutation = {
-    title:"Circumnutation",
-    content:"Upload a video of a ciumnutating  \n plant to track and measure \n rate& average amplitude"
-}
-
-const Gravitropism = {
-    title:"Gravitropism",
-    content:"Upload a video of plant \n tropism to measure the \n  rate. distance & angle"
-}
-
-const LinkToPlant = {
-    title:"Links to the \n Plant World",
-    content:"A-Z about plants"
-}
-
-const Tutorial = {
-    title:"Using Plant Tracer",
-    content:"How to Use this application"
-}
+import  {Circumnutation,Gravitropism,LinkToPlant,Tutorial} from "./content"
 
 const url = "http://www.planttracer.com/"
 

@@ -1,18 +1,9 @@
 import React from "react"
 import {View,Text,TouchableOpacity, Image} from "react-native"
 import BackgroundGradient from '../../component/BackgroundGradient';
-import UploadVideoSection from "../../component/UploadVideoSection"
 import {NavigateTo} from "../../api/NavigateTo"
 import {GenerateNavigationButton} from "../../api/GenereateHeader"
 import Button from "../../component/Button"
-
-const FromGallery = {
-    title:"Select from \n Video Gallery",
-}
-
-const FromSample = {
-    title:"Select from  \n Sample Videoo",
-}
 
 class HomeScreen extends React.Component {
 
